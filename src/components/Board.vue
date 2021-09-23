@@ -53,7 +53,7 @@ export default {
 .Board {
 
   &__header {
-    background: #172229;
+    background: #011E26;
     height: 70px;
     color: #00FF77;
     font-style: italic;
