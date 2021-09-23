@@ -7,14 +7,14 @@ html {
 }
 
 .textInput {
+  width: 270px;
   margin-top: 10px;
   padding: 20px 10px;
   background-color: #ccc;
   border-radius: 8px;
   cursor: pointer;
   border: none;
-  font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: #242424;
 
   &:focus {
@@ -31,10 +31,10 @@ html {
   align-items: flex-start;
   min-width: 290px;
   width: 290px;
-  background-color: #e0e0e0;
+  background-color: #013543;
   border-radius: 8px;
   padding: 15px;
-  border: solid #ddd 1px;
+  border: solid #013543 1px;
   color: gray;
   vertical-align: top;
 
@@ -42,12 +42,14 @@ html {
     font-size: 20px;
     font-weight: bold;
     padding: 15px;
-    color: black;
+    color: white;
   }
 
   &-counter {
-    color: rgb(0, 140, 255);
+    color: #E879F9;
     padding: 15px;
+    display: flex;
+    align-items: center;
   }
 
   &-index {
@@ -79,7 +81,7 @@ html {
   position: relative;
   display: flex;
   padding: 30px 15px 40px;
-  background-color: #013543;
+  background-color: #00DC82;
   border-radius: 8px;
   width: 260px;
   cursor: pointer;
@@ -108,6 +110,7 @@ html {
 }
 
 .addlist {
+  margin-left: 5px;
   display: inline-block;
   flex-direction: column;
   align-items: center;
@@ -129,18 +132,18 @@ html {
   font-size: 20px;
   cursor: pointer;
   border-radius: 8px;
-  border-color: #011E26;
+  border-color: #013543;
   border-style: solid;
-  background-color: #011E26;
-  color: #00FF77;
+  background-color: #013543;
+  color: white;
   margin: 5px;
 }
 
 .body {
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
   word-wrap: break-word;
-  color: white;
+  color: black;
 }
 
 .info-line {
