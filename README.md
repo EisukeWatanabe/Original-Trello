@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/766cdf9a-9f0a-401b-a818-7ea5952fc9d9/deploy-status)](https://app.netlify.com/sites/original-trello-fe261d/deploys)
 # trello
 
 ## Project setup
