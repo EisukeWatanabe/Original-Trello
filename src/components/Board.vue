@@ -4,7 +4,7 @@
       <span class="c-Board__header--title">Trello</span>
     </header>
     <main class="c-Board__main">
-      <p class="c-Board__infoLine">All: <span class="c-Board__infoLine-color">{{ totalCardCount }}</span> tasks</p>
+      <p class="c-Board__infoLine">Total <span class="c-Board__infoLine-color">{{ totalCardCount }}</span> tasks</p>
       <draggable class="list-index" :list="lists" @end="movingList">
         <list v-for="(item, index) in lists"
           :key="item.id"
@@ -73,9 +73,11 @@ export default Vue.extend({
   }
 
   &__infoLine {
+    font-style: italic;
     margin: 20px;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
+    font-weight: bold;
 
     &-color {
       color: #00FF77;

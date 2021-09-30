@@ -2,7 +2,7 @@
   <div class="c-List">
     <div class="c-List__header">
       <p class="c-List__title">{{ title }}</p>
-      <p class="c-List__counter">Total:<span class="c-List__counter--color">{{ totalCardList }}</span></p>
+      <p class="c-List__counter"><span class="c-List__counter--color">{{ totalCardList }}</span></p>
       <div class="c-List__delete" @click="removeList">×</div>
     </div>
     <draggable group="cards" :list="cards" @end="$emit('change')">
@@ -98,6 +98,7 @@ export default Vue.extend({
 
     &--color {
       color: #00d724;
+      font-size: 20px;
     }
   }
 
