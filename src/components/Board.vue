@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <header class="Board__header">
-      Trello
+  <div class="l-wrapper">
+    <header class="c-Board__header">
+      <span class="c-Board__header--title">Trello</span>
     </header>
-    <main class="Board__main">
-      <p class="info-line">All: <span class="info-line-color">{{ totalCardCount }}</span> tasks</p>
+    <main class="c-Board__main">
+      <p class="c-Board__infoLine">All: <span class="c-Board__infoLine-color">{{ totalCardCount }}</span> tasks</p>
       <draggable class="list-index" :list="lists" @end="movingList">
         <list v-for="(item, index) in lists"
           :key="item.id"
@@ -19,12 +19,13 @@
 </template>
 
 <script>
+import Vue from "vue";
 import ListAdd from "./ListAdd";
 import { mapState } from 'vuex'
 import List from "./List.vue";
 import draggable from "vuedraggable";
 
-export default {
+export default Vue.extend({
   components: {
     ListAdd,
     List,
@@ -46,20 +47,23 @@ export default {
       this.$store.dispatch('updateList', { lists: this.lists })
     }
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>
-.Board {
+.c-Board {
 
   &__header {
-    background: #011E26;
     height: 70px;
-    color: #00FF77;
     font-style: italic;
-    font-size: 40px;
+    font-size: 55px;
     text-align: left;
     padding: 20px;
+
+    &--title {
+      color: #09ee74;
+      text-shadow: 2px 2px 5px #04bd7c;
+    }
   }
 
   &__main {
@@ -68,5 +72,21 @@ export default {
     height: 100%;
   }
 
+  &__infoLine {
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+
+    &-color {
+      color: #00FF77;
+    }
+  }
+
 }
+
+.list-index {
+  display: flex;
+}
+
+
 </style>

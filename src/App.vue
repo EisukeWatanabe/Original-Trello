@@ -5,13 +5,14 @@
 </template>
 
 <script lang="ts">
+import Vue from "vue";
 import Board from './components/Board.vue';
 
-export default {
+export default Vue.extend({
   name: 'app',
   components: {
     Board
   }
-}
+});
 
 </script>

@@ -2,17 +2,19 @@
   <form :class="classList" @submit.prevent="addList">
   <input v-model="title"
       type="text"
-      class="textInput"
+      class="c-textInput"
       placeholder="Add new list"
       @focusin="startEditing"
       @focusout="finishEditing"
   >
-  <button type="submit" class="addButton" v-if="isEditing || titleExists">Add</button>
+  <button type="submit" class="c-addButton" v-if="isEditing || titleExists">Add</button>
   </form>
 </template>
 
 <script>
-export default {
+import Vue from 'vue';
+
+export default Vue.extend({
   data() {
     return {
       title: '',
@@ -46,7 +48,7 @@ export default {
       this.isEditing = false
     }
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>

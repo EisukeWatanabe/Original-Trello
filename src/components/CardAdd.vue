@@ -3,19 +3,21 @@
     <input
       v-model="body"
       type="text"
-      class="textInput"
+      class="c-textInput"
       placeholder="Add new card"
       @focusin="startEditing"
       @focusout="finishEditing"
     />
-    <button type="submit" class="addButton" v-if="isEditing || bodyExists">
+    <button type="submit" class="c-addButton" v-if="isEditing || bodyExists">
       Add
     </button>
   </form>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   props: {
     listIndex: {
       type: Number,
@@ -39,7 +41,7 @@ export default {
       }
       return classList;
     },
-    bodyExists() {
+    bodyExists():boolean {
       return this.body.length > 0
     }
   },
@@ -56,9 +58,5 @@ export default {
       this.body = ''
     }
   }
-}
+});
 </script>
-
-<style scoped>
-
-</style>
