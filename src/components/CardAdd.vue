@@ -33,7 +33,7 @@ export default Vue.extend({
   computed: {
     classList() {
       const classList = ['addcard']
-      if(this.isEditing) {
+      if (this.isEditing) {
         classList.push('active')
       }
       if (this.bodyExists) {
